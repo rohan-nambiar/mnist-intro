@@ -9,6 +9,7 @@ import com.neophyters.mnistapp.service.ImageClientService;
 
 @RestController
 @RequestMapping("/image")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ImageController {
 
         @Autowired
@@ -16,6 +17,7 @@ public class ImageController {
 
         @PostMapping("/send")
     public String sendImageData(@RequestBody ImageDataDTO imageDataDTO) {
+        System.out.println("Received image data: " + imageDataDTO.getImageData());
         return imageClientService.sendImageData(imageDataDTO.getImageData());
     }
 

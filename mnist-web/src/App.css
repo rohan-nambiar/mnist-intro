@@ -1,0 +1,51 @@
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  margin: 20px; /* Add some margin around the container */
+}
+
+.canvas-wrapper {
+  width: 56px; /* Double the original width */
+  height: 56px; /* Double the original height */
+  display: inline-block; /* Treat the wrapper as an inline block element */
+  line-height: 0; /* Remove extra line height to avoid unnecessary spacing */
+}
+
+
+
+.buttons-container {
+  /* Flexbox layout to align buttons */
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 20px; /* Space below buttons before the API response */
+}
+
+.action-button {
+  /* Button styling */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none; /* Remove outline to improve aesthetics */
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.api-response-container {
+  /* API response styling */
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 300px; /* Adjust width as needed */
+  word-wrap: break-word; /* Ensure long text doesn't overflow */
+  overflow: auto; /* Add scrollbar if content overflows */
+}
